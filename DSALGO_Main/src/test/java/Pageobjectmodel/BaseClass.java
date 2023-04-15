@@ -27,6 +27,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 		public  GraphPOM gp;
 		public LinkedListPOM ll;
 		public StackPOM st;
+		public SignOutPOM So;
+		
 	    
 	    public BaseClass() 
 	    {
@@ -74,6 +76,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 			qp = new QueuePOM(driver);
 			tp = new TreePOM(driver);
 			gp = new GraphPOM(driver);
+			So= new SignOutPOM(driver);
 			
 		}	
 		public static WebDriver getDriver()

@@ -4,6 +4,8 @@ import java.awt.AWTException;
 import java.io.IOException;
 import java.util.List;
 
+//import org.junit.Assert;
+
 import Pageobjectmodel.BaseClass;
 import Pageobjectmodel.DataStructurePOM;
 import Utility.*;
@@ -88,6 +90,7 @@ public class DataStructureSD extends BaseClass{
 	{
 		List<List<String>>data=pythonCode.cells();
 		 DSp.InValidenterCode(data.get(0).get(0)); 
+		// Assert.fail();
 	}
 	
 
