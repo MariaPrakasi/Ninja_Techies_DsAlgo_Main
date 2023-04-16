@@ -15,7 +15,7 @@ public class Helper {
 	private Helper() {
 		
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*","--start-maximized,--allow-http-screen-capture");
+		options.addArguments("--remote-allow-origins=*","--headlesss");
 	
 		WebDriverManager.chromedriver().setup();
 		webdriver = new ChromeDriver(options);
