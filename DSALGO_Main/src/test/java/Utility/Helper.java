@@ -2,6 +2,7 @@ package Utility;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -13,8 +14,12 @@ public class Helper {
 	
 	private Helper() {
 		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+	
 		WebDriverManager.chromedriver().setup();
-		webdriver = new ChromeDriver();
+		webdriver = new ChromeDriver(options);
+		
 		new WebDriverWait(webdriver, Duration.ofSeconds(TIMEOUT));
 		webdriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
 		webdriver.manage().window().maximize();
