@@ -97,18 +97,20 @@ public class DataStructureSD extends BaseClass{
 
 
 	@When("User Clicks on Run button for invalid code")
-	public void user_clicks_on_run_button_for_invalid_code() throws InterruptedException
+	public void user_clicks_on_run_button_for_invalid_code() throws Throwable
 	{
 	    DSp.clickOnRun();
-	   
 	    Thread.sleep(1000);
+	   
+	    
 	}
 	@Then("User Verify the error message for invalid code")
-	public void user_verify_the_error_message_for_invalid_code() throws InterruptedException 
+	public void user_verify_the_error_message_for_invalid_code() throws Throwable 
 	{
 		String actualMsg = DSp.getErrormsg();
 		System.out.println("Errormsg" +actualMsg);
-		Thread.sleep(1000);
+		 Helper.screenshot(driver, System.currentTimeMillis());
+	
 		
 	}
 	

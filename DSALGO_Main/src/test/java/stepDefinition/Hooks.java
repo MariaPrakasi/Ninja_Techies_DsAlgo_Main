@@ -32,21 +32,21 @@ public class Hooks extends BaseClass {
 //		LoggerLoad.info("-----------------------------------------------------------------------------------------------");
 		Helper.setUpDriver();
 	}
-	@After
-	public void tearDown(Scenario scenario)
-	{	        
-		 if(scenario.getStatus()==Status.FAILED)
-		 {				 
-			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);	
-			scenario.attach(screenshot, "image/png", scenario.getName());
-		
-	     }   
-		 else if (scenario.getStatus()==Status.PASSED)
-		 {
-			 System.out.println("Scenario Passed");
-		 }
-		
-	}
+//	@After
+//	public void tearDown(Scenario scenario)
+//	{	        
+//		 if(scenario.getStatus()==Status.FAILED)
+//		 {				 
+//			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);	
+//			scenario.attach(screenshot, "image/png", scenario.getName());
+//		
+//	     }   
+//		 else if (scenario.getStatus()==Status.PASSED)
+//		 {
+//			 System.out.println("Scenario Passed");
+//		 }
+//		
+//	}
 	@AfterAll
 	public static void after() {
 //		LoggerLoad.info("Closing Driver");
